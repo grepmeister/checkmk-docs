@@ -1,0 +1,171 @@
+include::global_attr.adoc[]
+= The official {CMK} user guide
+:revdate:
+:title: {CMK} - The official guide
+:description:
+
+
+== Beginner's guide
+include::intro_welcome.asciidoc[leveloffset=2,Welcome to {CMK}]
+include::intro_setup.asciidoc[leveloffset=2,Setting up {CMK}]
+include::intro_gui.asciidoc[leveloffset=2,The {CMK} user interface]
+include::intro_setup_monitor.asciidoc[leveloffset=2,Setting up monitoring]
+include::intro_tools.asciidoc[leveloffset=2,The monitoring tools]
+include::intro_monitor.asciidoc[leveloffset=2,{CMK} in monitoring]
+include::intro_finetune.asciidoc[leveloffset=2,Fine-tuning the monitoring]
+include::intro_users.asciidoc[leveloffset=2,Working with multiple users]
+include::intro_notifications.asciidoc[leveloffset=2,Switching on notifications]
+include::intro_extend.asciidoc[leveloffset=2,Extending the monitoring system further]
+include::intro_bestpractise.asciidoc[leveloffset=2,Best practices, tips & tricks]
+
+[#installation]
+== Installation
+//include::draft_cmk_editions.asciidoc[]
+include::install_packages.asciidoc[leveloffset=2,Basic information on the installation of {CMK}]
+include::install_packages_redhat.asciidoc[leveloffset=2,Installation on Red Hat and CentOS]
+include::install_packages_sles.asciidoc[leveloffset=2,Installation on SUSE Linux Enterprise Server]
+include::install_packages_debian.asciidoc[leveloffset=2,Installation on Debian and Ubuntu]
+include::introduction_docker.asciidoc[leveloffset=2,Installation as a Docker container]
+include::cmk_versions.asciidoc[leveloffset=2,{CMK} versions]
+include::update_major.asciidoc[leveloffset=2,Update to version {v21}]
+include::update.asciidoc[leveloffset=2,Updates and Upgrades]
+// check_mk_getting_started fliegt hier als nächstes raus
+include::checkmk_getting_started.asciidoc[leveloffset=2,Getting started with monitoring]
+
+== Monitoring
+include::monitoring_basics.asciidoc[leveloffset=2,Basic principles of monitoring with {CMK}]
+include::user_interface.asciidoc[leveloffset=2,The user interface]
+include::views.asciidoc[leveloffset=2,Host and service views]
+include::dashboards.asciidoc[leveloffset=2,Dashboards]
+include::commands.asciidoc[leveloffset=2,Commands]
+include::basics_ackn.asciidoc[leveloffset=2,Acknowledging problems]
+include::basics_downtimes.asciidoc[leveloffset=2,Scheduled downtimes]
+include::graphing.asciidoc[leveloffset=2,Performance data and graphing]
+
+== Configuration
+include::wato.asciidoc[leveloffset=2,Configuring {CMK}]
+include::wato_monitoringagents.asciidoc[leveloffset=2,Monitoring agents]
+include::hosts_setup.asciidoc[leveloffset=2,Host administration]
+include::hosts_structure.asciidoc[leveloffset=2,Host structuring]
+include::host_tags.asciidoc[leveloffset=2,Host tags]
+include::wato_services.asciidoc[leveloffset=2,Understanding and configuring services]
+include::wato_rules.asciidoc[leveloffset=2,Host and service parameters]
+include::wato_user.asciidoc[leveloffset=2,Users, roles and permissions]
+include::timeperiods.asciidoc[leveloffset=2,Time periods]
+include::notifications.asciidoc[leveloffset=2,Notifications]
+include::labels.asciidoc[leveloffset=2,Labels]
+include::backup.asciidoc[leveloffset=2,Backups]
+
+== Further Articles
+
+=== Monitoring of various systems
+include::agent_linux.asciidoc[leveloffset=2,Monitoring Linux]
+include::agent_linux_legacy.asciidoc[leveloffset=2,Monitoring Linux in legacy mode]
+include::agent_windows.asciidoc[leveloffset=2,Monitoring Windows]
+include::agent_freebsd.asciidoc[leveloffset=2,Monitoring FreeBSD]
+include::snmp.asciidoc[leveloffset=2,Monitoring via SNMP]
+include::monitoring_vmware.asciidoc[leveloffset=2,Monitoring VMWare ESXi]
+include::monitoring_docker.asciidoc[leveloffset=2,Monitoring Docker]
+include::monitoring_kubernetes.asciidoc[leveloffset=2,Monitoring Kubernetes]
+include::monitoring_prometheus.asciidoc[leveloffset=2,Integrating Prometheus]
+include::integrating_datadog.asciidoc[leveloffset=2,Integrating Datadog]
+include::monitoring_aws.asciidoc[leveloffset=2,Monitoring Amazon Web Services (AWS)]
+include::monitoring_azure.asciidoc[leveloffset=2,Monitoring Microsoft Azure]
+include::monitoring_oracle.asciidoc[leveloffset=2,Monitoring Oracle databases]
+include::monitoring_mysql.asciidoc[leveloffset=2,Monitoring MySQL]
+include::clustered_services.asciidoc[leveloffset=2,Monitoring cluster services]
+include::active_checks.asciidoc[leveloffset=2,Monitoring network services (Active checks)]
+include::monitoring_jobs.asciidoc[leveloffset=2,Monitoring time-based processes (Cronjobs)]
+include::mk_filestats.asciidoc[leveloffset=2,Monitoring files]
+include::datasource_programs.asciidoc[leveloffset=2,Datasource programs]
+include::localchecks.asciidoc[leveloffset=2,Local checks]
+
+=== Web interface and analyses
+include::omd_https.asciidoc[leveloffset=2,Securing the web interface with HTTPS]
+include::saml.asciidoc[leveloffset=2,Authentication with SAML]
+include::ldap.asciidoc[leveloffset=2,User management with LDAP/Active Directory]
+include::kerberos.asciidoc[leveloffset=2,Single sign-on with Kerberos]
+include::predictive_monitoring.asciidoc[leveloffset=2,Predictive monitoring]
+include::availability.asciidoc[leveloffset=2,Availability]
+include::sla.asciidoc[leveloffset=2,Extended availability (SLAs)]
+include::reporting.asciidoc[leveloffset=2,Reports]
+include::bi.asciidoc[leveloffset=2,Business Intelligence (BI)]
+include::forecast_graphs.asciidoc[leveloffset=2,Forecast graphs]
+
+=== Command line and APIs
+include::cmk_commandline.asciidoc[leveloffset=2,{CMK} on the command line]
+include::livestatus.asciidoc[leveloffset=2,Retrieving status data via Livestatus]
+include::livestatus_references.asciidoc[leveloffset=2,Livestatus command reference]
+include::rest_api.asciidoc[leveloffset=2,Configuration via the {CMK} REST API]
+include::bakery_api.asciidoc[leveloffset=2,The Bakery API]
+include::web_api.asciidoc[leveloffset=2,Configuration via HTTP-API]
+include::web_api_references.asciidoc[leveloffset=2,Command reference for the HTTP-API]
+
+=== Other advanced topics
+include::security.asciidoc[leveloffset=2,Security]
+include::ports.asciidoc[leveloffset=2,Ports]
+include::ec.asciidoc[leveloffset=2,The Event Console]
+include::distributed_monitoring.asciidoc[leveloffset=2,Distributed monitoring]
+include::inventory.asciidoc[leveloffset=2,The HW/SW Inventory]
+include::agent_deployment.asciidoc[leveloffset=2,Automatic agent updates]
+include::omd_basics.asciidoc[leveloffset=2,Site administration with omd]
+include::piggyback.asciidoc[leveloffset=2,The piggyback mechanism]
+include::dcd.asciidoc[leveloffset=2,Dynamic host configuration]
+include::managed.asciidoc[leveloffset=2,The {ME}]
+include::alert_handlers.asciidoc[leveloffset=2,Alert handlers]
+include::managing_docker.asciidoc[leveloffset=2,{CMK} server in a Docker container]
+include::mkps.asciidoc[leveloffset=2,{CMK} extension packages (MKPs)]
+include::simulation_mode.asciidoc[leveloffset=2,Simulation mode]
+include::regexes.asciidoc[leveloffset=2,Regular expressions in {CMK}]
+include::support_diagnostics.asciidoc[leveloffset=2,Support diagnostics]
+include::license.asciidoc[leveloffset=2,Managing licenses]
+include::analyze_configuration.asciidoc[leveloffset=2,Analyzing the {CMK} site configuration]
+
+=== The {CMK} Micro Core (CMC)
+include::cmc.asciidoc[leveloffset=2,The {CMK} Micro Core (CMC)]
+include::cmc_differences.asciidoc[leveloffset=2,Special characteristics of the CMC]
+include::cmc_migration.asciidoc[leveloffset=2,Migration to the CMC]
+include::cmc_files.asciidoc[leveloffset=2,CMC files and directories]
+
+=== Integrating {CMK} with other systems
+include::metrics_exporter.asciidoc[leveloffset=2,Sending metrics to InfluxDB and Graphite]
+include::ntop.asciidoc[leveloffset=2,Integrating ntopng in {CMK}]
+include::grafana.asciidoc[leveloffset=2,Integrating {CMK} in Grafana]
+include::nagvis.asciidoc[leveloffset=2,NagVis: status data on maps and diagrams]
+include::nagstamon.asciidoc[leveloffset=2,Connecting Nagstamon to {CMK}]
+include::notifications_jira.asciidoc[leveloffset=2,Notifications via Jira]
+include::notifications_mattermost.asciidoc[leveloffset=2,Notifications via Mattermost]
+include::notifications_pagerduty.asciidoc[leveloffset=2,Notifications via PagerDuty]
+include::notifications_pushover.asciidoc[leveloffset=2,Notifications via Pushover]
+include::notifications_opsgenie.asciidoc[leveloffset=2,Notifications via Opsgenie]
+include::notifications_servicenow.asciidoc[leveloffset=2,Notifications via ServiceNow]
+include::notifications_slack.asciidoc[leveloffset=2,Notifications via Slack]
+include::notifications_splunkoncall.asciidoc[leveloffset=2,Notifications via Splunk On-Call]
+include::notifications_webex.asciidoc[leveloffset=2,Notifications via Cisco Webex Teams]
+
+== Implementing extensions
+include::devel_check_plugins.asciidoc[leveloffset=2,Writing your own check plug-ins]
+include::dev_guidelines.asciidoc[leveloffset=2,Guidelines for coding check plug-ins]
+
+[#cma]
+== The {CMK} Appliance
+include::cma_rack1_quick_start.asciidoc[leveloffset=2,Quick start guide for {CMK} rack1]
+include::cma_virt1_quick_start.asciidoc[leveloffset=2,Quick start guide for {CMK} virt1]
+include::introduction_virt1.asciidoc[leveloffset=2,Installation of a virtual appliance]
+include::appliance_usage.asciidoc[leveloffset=2,Configuring and using the Appliance]
+
+== Glossary and more
+//IN:legacy_documentation
+include::glossar.asciidoc[leveloffset=2,Glossary]
+include::copyright.asciidoc[leveloffset=2,Copyright information]
+
+//SK: Das folgende Banner kann nach Abschluss der Kampagne bzw. nach Rücksprache mit HR später wieder entfernt werden.
+[%notitle]
+= {nbsp}
+++++
+<div id="hiring-banner">
+<a href="https://tribe29.com/jobs/open-positions-consulting/" style="padding-left: 0rem;">
+<img src="../images/we_are_hiring_en.png" alt="Banner for a hiring campaign of tribe29.">
+</a>
+</div>
+++++

@@ -1,0 +1,173 @@
+include::global_attr.adoc[]
+= Das offizielle {CMK} Benutzerhandbuch
+:revdate:
+:title: {CMK} - Das offizielle Handbuch
+:description:
+
+== Leitfaden für Einsteiger
+include::intro_welcome.asciidoc[leveloffset=2,Willkommen bei {CMK}]
+include::intro_setup.asciidoc[leveloffset=2,{CMK} aufsetzen]
+include::intro_gui.asciidoc[leveloffset=2,Die {CMK}-Oberfläche]
+include::intro_setup_monitor.asciidoc[leveloffset=2,Das Monitoring einrichten]
+include::intro_tools.asciidoc[leveloffset=2,Die Monitoring-Werkzeuge]
+include::intro_monitor.asciidoc[leveloffset=2,{CMK} im Monitoring]
+include::intro_finetune.asciidoc[leveloffset=2,Das Monitoring feinjustieren]
+include::intro_users.asciidoc[leveloffset=2,Mit mehreren Benutzern arbeiten]
+include::intro_notifications.asciidoc[leveloffset=2,Benachrichtigungen einschalten]
+include::intro_extend.asciidoc[leveloffset=2,Das Monitoring weiter ausbauen]
+include::intro_bestpractise.asciidoc[leveloffset=2,Best Practises, Tipps & Tricks]
+
+[#installation]
+== Installation
+//include::draft_cmk_editions.asciidoc[]
+include::install_packages.asciidoc[leveloffset=2,Grundsätzliches zur Installation von {CMK}]
+include::install_packages_redhat.asciidoc[leveloffset=2,Installation unter Red Hat und CentOS]
+include::install_packages_sles.asciidoc[leveloffset=2,Installation unter SUSE Linux Enterprise Server]
+include::install_packages_debian.asciidoc[leveloffset=2,Installation unter Debian und Ubuntu]
+include::introduction_docker.asciidoc[leveloffset=2,Installation als Docker-Container]
+include::cmk_versions.asciidoc[leveloffset=2,{CMK}-Versionen]
+include::update_major.asciidoc[leveloffset=2,Update auf Version {v21}]
+include::update.asciidoc[leveloffset=2,Updates und Upgrades]
+// check_mk_getting_started fliegt hier als nächstes raus
+include::checkmk_getting_started.asciidoc[leveloffset=2,Schnelleinstieg ins Monitoring]
+
+== Monitoring
+include::monitoring_basics.asciidoc[leveloffset=2,Grundlagen des Monitorings mit {CMK}]
+include::user_interface.asciidoc[leveloffset=2,Die Benutzeroberfläche]
+include::views.asciidoc[leveloffset=2,Ansichten von Hosts und Services (Views)]
+include::dashboards.asciidoc[leveloffset=2,Dashboards]
+include::commands.asciidoc[leveloffset=2,Kommandos]
+include::basics_ackn.asciidoc[leveloffset=2,Quittierung von Problemen]
+include::basics_downtimes.asciidoc[leveloffset=2,Wartungszeiten]
+include::graphing.asciidoc[leveloffset=2,Messwerte und Graphing]
+
+== Konfiguration
+include::wato.asciidoc[leveloffset=2,Die Konfiguration von {CMK}]
+include::wato_monitoringagents.asciidoc[leveloffset=2,Monitoring-Agenten]
+include::hosts_setup.asciidoc[leveloffset=2,Verwaltung der Hosts]
+include::hosts_structure.asciidoc[leveloffset=2,Strukturierung der Hosts]
+include::host_tags.asciidoc[leveloffset=2,Host-Merkmale]
+include::wato_services.asciidoc[leveloffset=2,Services verstehen und konfigurieren]
+include::wato_rules.asciidoc[leveloffset=2,Host- und Serviceparameter]
+include::wato_user.asciidoc[leveloffset=2,Benutzer, Zuständigkeiten, Berechtigungen]
+include::timeperiods.asciidoc[leveloffset=2,Zeitperioden (Time Periods)]
+include::notifications.asciidoc[leveloffset=2,Benachrichtigungen]
+include::labels.asciidoc[leveloffset=2,Labels]
+include::backup.asciidoc[leveloffset=2,Backups]
+
+== Weiterführende Artikel
+
+=== Überwachung bestimmter Systeme
+include::agent_linux.asciidoc[leveloffset=2,Linux überwachen]
+include::agent_linux_legacy.asciidoc[leveloffset=2,Linux überwachen im Legacy-Modus]
+include::agent_windows.asciidoc[leveloffset=2,Windows überwachen]
+include::agent_freebsd.asciidoc[leveloffset=2,FreeBSD überwachen]
+include::snmp.asciidoc[leveloffset=2,Überwachen via SNMP]
+// IN:agent_unix
+include::monitoring_vmware.asciidoc[leveloffset=2,VMWare ESXi überwachen]
+include::monitoring_docker.asciidoc[leveloffset=2,Docker überwachen]
+include::monitoring_kubernetes.asciidoc[leveloffset=2,Kubernetes überwachen]
+include::monitoring_prometheus.asciidoc[leveloffset=2,Prometheus integrieren]
+include::integrating_datadog.asciidoc[leveloffset=2,Datadog integrieren]
+include::monitoring_aws.asciidoc[leveloffset=2,Amazon Web Services (AWS) überwachen]
+include::monitoring_azure.asciidoc[leveloffset=2,Microsoft Azure überwachen]
+include::monitoring_oracle.asciidoc[leveloffset=2,Oracle-Datenbanken überwachen]
+include::monitoring_mysql.asciidoc[leveloffset=2,MySQL überwachen]
+include::clustered_services.asciidoc[leveloffset=2,Cluster-Services überwachen]
+include::active_checks.asciidoc[leveloffset=2,Netzwerkdienste überwachen (Aktive Checks)]
+include::monitoring_jobs.asciidoc[leveloffset=2,Zeitbasierte Prozesse (Cronjobs) überwachen]
+include::mk_filestats.asciidoc[leveloffset=2,Dateien überwachen]
+include::datasource_programs.asciidoc[leveloffset=2,Datenquellenprogramme]
+include::localchecks.asciidoc[leveloffset=2,Lokale Checks]
+
+=== Oberfläche und Auswertungen
+include::omd_https.asciidoc[leveloffset=2,Weboberfläche mit HTTPS absichern]
+include::saml.asciidoc[leveloffset=2,Anmeldung mit SAML]
+include::ldap.asciidoc[leveloffset=2,Benutzerverwaltung mit LDAP/Active Directory]
+include::kerberos.asciidoc[leveloffset=2,Single Sign-On mit Kerberos]
+include::predictive_monitoring.asciidoc[leveloffset=2,Prognosebasiertes Monitoring]
+include::availability.asciidoc[leveloffset=2,Verfügbarkeit (Availability)]
+include::sla.asciidoc[leveloffset=2,Erweiterte Verfügbarkeiten (SLAs)]
+include::reporting.asciidoc[leveloffset=2,Berichte (Reports)]
+include::bi.asciidoc[leveloffset=2,Business Intelligence (BI)]
+include::forecast_graphs.asciidoc[leveloffset=2,Vorhersagegraphen erstellen]
+
+=== Kommandozeile und APIs
+include::cmk_commandline.asciidoc[leveloffset=2,{CMK} auf der Kommandozeile]
+include::livestatus.asciidoc[leveloffset=2,Statusdaten abrufen via Livestatus]
+include::livestatus_references.asciidoc[leveloffset=2,Livestatus Befehlsreferenz]
+include::rest_api.asciidoc[leveloffset=2,Konfiguration via {CMK} REST-API]
+include::bakery_api.asciidoc[leveloffset=2,Die Bakery-API]
+include::web_api.asciidoc[leveloffset=2,Konfiguration via HTTP-API]
+include::web_api_references.asciidoc[leveloffset=2,Befehlsreferenz der HTTP-API]
+
+=== Weitere fortgeschrittene Themen
+include::security.asciidoc[leveloffset=2,Sicherheit (Security)]
+include::ports.asciidoc[leveloffset=2,Ports]
+include::ec.asciidoc[leveloffset=2,Die Event Console]
+include::distributed_monitoring.asciidoc[leveloffset=2,Verteiltes Monitoring]
+include::inventory.asciidoc[leveloffset=2,Die HW/SW-Inventur]
+include::agent_deployment.asciidoc[leveloffset=2,Automatische Agenten-Updates]
+include::omd_basics.asciidoc[leveloffset=2,Instanzen (Sites) mit omd verwalten]
+include::piggyback.asciidoc[leveloffset=2,Der Piggyback-Mechanismus]
+include::dcd.asciidoc[leveloffset=2,Dynamische Host-Konfiguration]
+include::managed.asciidoc[leveloffset=2,Die {ME}]
+include::alert_handlers.asciidoc[leveloffset=2,Alert Handler]
+include::managing_docker.asciidoc[leveloffset=2,{CMK}-Server im Docker-Container]
+include::mkps.asciidoc[leveloffset=2,{CMK} Erweiterungspakete (MKPs)]
+include::simulation_mode.asciidoc[leveloffset=2,Der Simulationsmodus]
+include::regexes.asciidoc[leveloffset=2,Reguläre Ausdrücke in {CMK}]
+include::support_diagnostics.asciidoc[leveloffset=2,Support Diagnostics]
+include::license.asciidoc[leveloffset=2,Lizenzen verwalten]
+include::analyze_configuration.asciidoc[leveloffset=2,Konfiguration der {CMK} Instanz analysieren]
+
+=== Der {CMK} Micro Core (CMC)
+include::cmc.asciidoc[leveloffset=2,Der {CMK} Micro Core (CMC)]
+include::cmc_differences.asciidoc[leveloffset=2,Besonderheiten des CMC]
+include::cmc_migration.asciidoc[leveloffset=2,Migration auf den CMC]
+include::cmc_files.asciidoc[leveloffset=2,Dateien und Verzeichnisse des CMC]
+
+=== Integration mit anderen Systemen
+include::metrics_exporter.asciidoc[leveloffset=2,Metriken an InfluxDB und Graphite senden]
+include::ntop.asciidoc[leveloffset=2,ntopng in {CMK} integrieren]
+include::grafana.asciidoc[leveloffset=2,{CMK} in Grafana integrieren]
+include::nagvis.asciidoc[leveloffset=2,NagVis: Statusdaten auf Karten und Diagrammen]
+include::nagstamon.asciidoc[leveloffset=2,Nagstamon mit {CMK} verbinden]
+include::notifications_jira.asciidoc[leveloffset=2,Benachrichtigungen per Jira]
+include::notifications_mattermost.asciidoc[leveloffset=2,Benachrichtigungen per Mattermost]
+include::notifications_pagerduty.asciidoc[leveloffset=2,Benachrichtigungen per PagerDuty]
+include::notifications_pushover.asciidoc[leveloffset=2,Benachrichtigungen per Pushover]
+include::notifications_opsgenie.asciidoc[leveloffset=2,Benachrichtigungen per Opsgenie]
+include::notifications_servicenow.asciidoc[leveloffset=2,Benachrichtigungen per ServiceNow]
+include::notifications_slack.asciidoc[leveloffset=2,Benachrichtigungen per Slack]
+include::notifications_splunkoncall.asciidoc[leveloffset=2,Benachrichtigungen per Splunk On-Call]
+include::notifications_webex.asciidoc[leveloffset=2,Benachrichtigungen per Cisco Webex Teams]
+
+== Programmierung von Erweiterungen
+include::devel_check_plugins.asciidoc[leveloffset=2,Eigene Check-Plugins schreiben]
+include::dev_guidelines.asciidoc[leveloffset=2,Richtlinien für Check-Plugins]
+
+[#cma]
+== Die {CMK} Appliance
+include::cma_rack1_quick_start.asciidoc[leveloffset=2,Schnellstart-Anleitung {CMK} rack1]
+include::cma_virt1_quick_start.asciidoc[leveloffset=2,Schnellstart-Anleitung {CMK} virt1]
+include::introduction_virt1.asciidoc[leveloffset=2,Installation der virtuellen Appliance]
+include::appliance_usage.asciidoc[leveloffset=2,Appliance einrichten und nutzen]
+
+== Glossar und mehr
+//IN:legacy_documentation
+include::glossar.asciidoc[leveloffset=2,Glossar]
+include::copyright.asciidoc[leveloffset=2,Copyright-Hinweise]
+//include::syntax.asciidoc[]
+//include::checkapidraft.asciidoc[]
+
+//SK: Das folgende Banner kann nach Abschluss der Kampagne bzw. nach Rücksprache mit HR später wieder entfernt werden.
+[%notitle]
+= {nbsp}
+++++
+<div id="hiring-banner">
+<a href="https://tribe29.com/jobs/open-positions-consulting/" style="padding-left: 0rem;">
+<img src="../images/we_are_hiring_de.png" alt="Banner for a hiring campaign of tribe29.">
+</a>
+</div>
+++++
